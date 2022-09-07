@@ -25,6 +25,10 @@ data class User(
 
     var token: String? = null,
 
+    @Size
+    @Column(name = "shop_id")
+    var shopId: Integer? = null,
+
     @Size(min = 2)
     @Column(name = "firstname")
     var firstName: String? = null,

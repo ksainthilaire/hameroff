@@ -9,5 +9,7 @@ data class UserAddress(
     var name: String? = null,
     var phone: String? = null,
     var details: String? = null,
+
+    @Column(name = "other_details")
     var otherDetails: String? = null,
 )

@@ -7,6 +7,7 @@ import javax.persistence.*
 @Table(name = "hameroff_user_verification")
 data class UserVerification(
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY) var id: Long? = null,
+
     @Column(name="user_id")
     var userId: Long? = null,
 

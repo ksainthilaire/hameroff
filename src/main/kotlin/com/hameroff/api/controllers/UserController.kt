@@ -17,9 +17,6 @@ class UserController @Autowired constructor(val service: UserService) {
     @GetMapping("/{id}")
     fun getUser(@PathVariable id: Long) = service.getUserById(id)
 
-    @GetMapping("/hello")
-    fun hello(): String = "Hello"
-
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     fun saveUser(@RequestBody form: RegisterForm): User = service.createUser(form)
