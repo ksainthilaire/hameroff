@@ -28,7 +28,7 @@ class ApplicationSecurity {
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 
         http.authorizeRequests()
-            .antMatchers("/api/v1/login").permitAll()
+            .antMatchers("/api/v1/login", "/api/v1/logout").permitAll()
             .anyRequest().authenticated()
 
         http.exceptionHandling()
