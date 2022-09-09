@@ -1,10 +1,8 @@
 package com.hameroff.api.controllers
 
-import com.hameroff.api.forms.RegisterForm
 import com.hameroff.api.model.Product
 import com.hameroff.api.services.ProductService
 import org.springframework.beans.factory.annotation.Autowired
-import org.springframework.http.HttpStatus
 import org.springframework.web.bind.annotation.*
 
 @RestController

@@ -5,4 +5,4 @@ import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface ForgotRepository : JpaRepository<UserForgot, Long>
+interface IForgotRepository : JpaRepository<UserForgot, Long>

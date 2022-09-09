@@ -1,6 +1,5 @@
 package com.hameroff.api.utils
 
-import com.hameroff.api.services.UserService
 import java.sql.Timestamp
 import java.util.*
 

@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param
 import java.sql.Timestamp
 import java.util.*
 
-interface UserVerificationRepository : JpaRepository<UserVerification, Long> {
+interface IUserVerificationRepository : JpaRepository<UserVerification, Long> {
     fun findByToken(token: String) : Optional<UserVerification>
 
     @Modifying

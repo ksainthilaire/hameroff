@@ -1,13 +1,13 @@
 package com.hameroff.api.services
 import com.hameroff.api.model.Product
-import com.hameroff.api.repositories.ProductRepository
+import com.hameroff.api.repositories.IProductRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.HttpStatus
 import org.springframework.stereotype.Service
 import org.springframework.web.server.ResponseStatusException
 
 @Service
-class ProductService(val productRepository: ProductRepository) {
+class ProductService(val productRepository: IProductRepository) {
 
     fun getAllProducts(): List<Product> = productRepository.findAll()
 

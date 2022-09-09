@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param
 import java.sql.Timestamp
 import java.util.*
 
-interface UserDeletionRepository : JpaRepository<UserDeletion, Long> {
+interface IUserDeletionRepository : JpaRepository<UserDeletion, Long> {
     fun findByToken(token: String) : Optional<UserDeletion>
 
     @Modifying

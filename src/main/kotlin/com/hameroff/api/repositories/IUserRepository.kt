@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param
 import java.util.*
 
 
-interface UserRepository : JpaRepository<User, Long> {
+interface IUserRepository : JpaRepository<User, Long> {
 
     fun findByMail(mail: String) : Optional<User>
 

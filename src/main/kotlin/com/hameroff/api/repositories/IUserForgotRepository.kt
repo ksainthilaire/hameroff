@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param
 import java.sql.Timestamp
 import java.util.*
 
-interface UserForgotRepository : JpaRepository<UserForgot, Long> {
+interface IUserForgotRepository : JpaRepository<UserForgot, Long> {
     fun findByToken(token: String) : Optional<UserForgot>
 
     @Modifying

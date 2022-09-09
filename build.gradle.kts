@@ -29,14 +29,26 @@ dependencies {
     // MySQL connector Java
     implementation("mysql:mysql-connector-java:8.0.30")
 
+
+
     // Spring boot starter data JPA
     implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.7.3")
     implementation("org.springdoc:springdoc-openapi-ui:1.6.11")
+
+    implementation("org.springframework.boot:spring-boot-starter-security:2.7.3")
+
+
     implementation("org.mariadb.jdbc:mariadb-java-client:2.1.2")
 
     implementation("org.springframework.security:spring-security-crypto:5.7.3")
 
     implementation("commons-validator:commons-validator:1.7")
+
+    // JWT
+    implementation("io.jsonwebtoken:jjwt:0.9.1")
+
+    // Security
+    implementation("org.springframework.security:spring-security-core:5.7.3")
 
     // Spring boot starter web
     implementation("org.springframework.boot:spring-boot-starter-web")
