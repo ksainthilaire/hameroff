@@ -30,4 +30,3 @@ class UserController @Autowired constructor(val service: UserService) {
     @PostMapping("/{id}/address")
     fun addUserAddress(@PathVariable id: Long, @RequestBody address: AddUserAddressRequest) = service.addUserAddress(id, address)
 }
-
