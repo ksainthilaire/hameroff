@@ -1,7 +1,6 @@
 package com.hameroff.api.services
 
 import com.hameroff.api.forms.request.LoginRequest
-import com.hameroff.api.forms.request.LogoutRequest
 import com.hameroff.api.forms.response.LoginResponse
 import com.hameroff.api.repositories.IUserRepository
 import com.hameroff.api.utils.JwtUtil
@@ -51,7 +50,4 @@ class LoginService @Autowired constructor(
         }
     }
 
-    fun logout(request: LogoutRequest) : ResponseEntity<Any> {
-
-    }
 }

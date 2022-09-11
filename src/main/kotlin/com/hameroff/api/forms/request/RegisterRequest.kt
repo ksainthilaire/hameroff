@@ -1,11 +1,11 @@
-package com.hameroff.api.forms
+package com.hameroff.api.forms.request
 
 import com.fasterxml.jackson.annotation.JsonAlias
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
 
-data class RegisterForm(
+data class RegisterRequest(
     @Email
     val mail: String,
 
@@ -18,4 +18,4 @@ data class RegisterForm(
 
     @JsonAlias("lastname")
     val lastName: String
-)
+) : IRequest

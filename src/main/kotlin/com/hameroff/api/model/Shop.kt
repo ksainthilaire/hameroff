@@ -1,5 +1,6 @@
 package com.hameroff.api.model
 
+import com.hameroff.api.enums.ShopType
 import javax.persistence.*
 
 @Entity
@@ -7,5 +8,13 @@ import javax.persistence.*
 data class Shop(
     @Id @GeneratedValue(strategy = GenerationType.AUTO) var id: Long? = null,
     var name: String? = null,
-    var isMultipleProducts: Boolean = false
+
+
+
+    var type: ShopType? = ShopType.NORMAL,
+
+    /*
+        The translation, list of texts associated with this shop.
+     */
+    var translationId: Long? = null,
 )

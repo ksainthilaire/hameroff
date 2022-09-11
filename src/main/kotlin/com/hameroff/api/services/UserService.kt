@@ -1,13 +1,11 @@
 package com.hameroff.api.services
 
-import com.hameroff.api.forms.RegisterForm
+import com.hameroff.api.forms.request.AddUserAddressRequest
+import com.hameroff.api.forms.request.RegisterRequest
 import com.hameroff.api.model.User
 import com.hameroff.api.model.UserDeletion
 import com.hameroff.api.model.UserVerification
-import com.hameroff.api.repositories.IUserDeletionRepository
-import com.hameroff.api.repositories.IUserForgotRepository
-import com.hameroff.api.repositories.IUserRepository
-import com.hameroff.api.repositories.IUserVerificationRepository
+import com.hameroff.api.repositories.*
 import com.hameroff.api.utils.createTimestamp
 import com.hameroff.api.utils.getCurrentTimestamp
 import com.hameroff.api.utils.isAvailable
@@ -30,7 +28,8 @@ class UserService @Autowired constructor(
     var userRepository: IUserRepository,
     val userForgot: IUserForgotRepository,
     var userVerification: IUserVerificationRepository,
-    var userDeletion: IUserDeletionRepository
+    var userDeletion: IUserDeletionRepository,
+    var userAddress: IUserAddressRepository
 ) {
 
     @Autowired
@@ -41,12 +40,11 @@ class UserService @Autowired constructor(
     fun getUserById(id: Long): User =
         userRepository.findByIdOrNull(id) ?: throw ResponseStatusException(HttpStatus.NOT_FOUND)
 
+    fun existsById(id: Long): Boolean =
+        userRepository.existsById(id) ?: throw ResponseStatusException(HttpStatus.NOT_FOUND)
 
-    fun login() {
 
-    }
-
-    fun createUser(form: RegisterForm): User {
+    fun createUser(form: RegisterRequest): User {
 
         if (userEmailExists(form.mail)) {
             throw ResponseStatusException(HttpStatus.CONFLICT)
@@ -172,9 +170,31 @@ class UserService @Autowired constructor(
 
 
     fun updateUser(id: Long, user: User) {
-        if (userRepository.existsById(id)) {
+        if (existsById(id)) {
             user.id = id
             userRepository.save(user)
+        }
+    }
+
+
+    fun addUserAddress(id: Long, request: AddUserAddressRequest) {
+        if (existsById(id)) {
+            // Check if it is an address that is valid thanks to an API
+
+            // Check if it's a valid phone number
+
+            // Check if it is not already registered
+
+            val address = request.address
+            address.userId = id;
+
+            userAddress.save(address)
+        }
+    }
+
+    fun removeUserAddress(id: Long, addressId: Long) {
+        if (existsById(id)) {
+            userAddress.deleteById(addressId)
         }
     }
 

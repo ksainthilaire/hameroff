@@ -46,9 +46,5 @@ class JwtUtil {
 
     companion object {
         private const val EXPIRE_DURATION = (24 * 60 * 60 * 1000).toLong()
-
-
-
-
     }
 }

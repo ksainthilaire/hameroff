@@ -3,7 +3,6 @@ package com.hameroff.api.utils
 import java.sql.Timestamp
 import java.util.*
 
-
 fun getCurrentDate() : Date = Date().apply {
     time = System.currentTimeMillis()
 }

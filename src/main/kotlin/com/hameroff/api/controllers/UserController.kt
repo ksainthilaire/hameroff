@@ -1,6 +1,7 @@
 package com.hameroff.api.controllers
 
-import com.hameroff.api.forms.RegisterForm
+import com.hameroff.api.forms.request.AddUserAddressRequest
+import com.hameroff.api.forms.request.RegisterRequest
 import com.hameroff.api.model.User
 import com.hameroff.api.services.UserService
 import org.springframework.beans.factory.annotation.Autowired
@@ -19,11 +20,14 @@ class UserController @Autowired constructor(val service: UserService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun saveUser(@RequestBody form: RegisterForm): User = service.createUser(form)
+    fun saveUser(@RequestBody form: RegisterRequest): User = service.createUser(form)
 
     @PutMapping("/{id}")
     fun updateUser(
         @PathVariable id: Long, @RequestBody User: User
     ) = service.updateUser(id, User)
+
+    @PostMapping("/{id}/address")
+    fun addUserAddress(@PathVariable id: Long, @RequestBody address: AddUserAddressRequest) = service.addUserAddress(id, address)
 }
 

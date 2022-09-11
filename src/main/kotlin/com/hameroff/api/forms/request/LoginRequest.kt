@@ -11,4 +11,4 @@ data class LoginRequest(
 
     @NotNull @Size(min = 5, max = 10)
     var password: String? = null
-)
+) : IRequest
