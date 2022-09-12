@@ -1,6 +1,6 @@
 package com.hameroff.api.filters
 
-import com.hameroff.api.model.User
+import com.hameroff.api.model.database.User
 import com.hameroff.api.utils.JwtUtil
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken

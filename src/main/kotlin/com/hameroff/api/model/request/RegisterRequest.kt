@@ -1,4 +1,4 @@
-package com.hameroff.api.forms.request
+package com.hameroff.api.model.request
 
 import com.fasterxml.jackson.annotation.JsonAlias
 import javax.validation.constraints.Email

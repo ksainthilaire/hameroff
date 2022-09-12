@@ -1,6 +1,5 @@
-package com.hameroff.api.model
+package com.hameroff.api.model.database
 
-import java.sql.Timestamp
 import javax.persistence.*
 
 @Entity

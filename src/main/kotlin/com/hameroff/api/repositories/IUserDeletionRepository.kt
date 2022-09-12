@@ -1,6 +1,6 @@
 package com.hameroff.api.repositories
 
-import com.hameroff.api.model.UserDeletion
+import com.hameroff.api.model.database.UserDeletion
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.Modifying
 import org.springframework.data.jpa.repository.Query

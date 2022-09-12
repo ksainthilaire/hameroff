@@ -1,6 +1,6 @@
 package com.hameroff.api.utils
 
-import com.hameroff.api.model.User
+import com.hameroff.api.model.database.User
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SignatureAlgorithm

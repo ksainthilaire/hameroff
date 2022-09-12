@@ -1,4 +1,4 @@
-package com.hameroff.api.forms.response
+package com.hameroff.api.model.response
 
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotNull

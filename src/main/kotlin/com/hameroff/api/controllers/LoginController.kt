@@ -1,6 +1,6 @@
 package com.hameroff.api.controllers
 
-import com.hameroff.api.forms.request.LoginRequest
+import com.hameroff.api.model.request.LoginRequest
 import com.hameroff.api.services.LoginService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity

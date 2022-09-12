@@ -1,5 +1,5 @@
 package com.hameroff.api.services
-import com.hameroff.api.model.Product
+import com.hameroff.api.model.database.Product
 import com.hameroff.api.repositories.IProductRepository
 import org.springframework.data.repository.findByIdOrNull
 import org.springframework.http.HttpStatus

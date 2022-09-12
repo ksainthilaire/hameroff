@@ -1,11 +1,11 @@
-package com.hameroff.api.model
+package com.hameroff.api.model.database
 
 import java.sql.Timestamp
 import javax.persistence.*
 
 @Entity
-@Table(name = "hameroff_user_deletion")
-data class UserDeletion(
+@Table(name = "hameroff_user_forgot")
+data class UserForgot(
     @Id @GeneratedValue(strategy = GenerationType.AUTO) var id: Long? = null,
 
     @Column(name="user_id")

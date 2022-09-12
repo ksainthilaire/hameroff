@@ -1,4 +1,4 @@
-package com.hameroff.api.model
+package com.hameroff.api.model.database
 
 import com.hameroff.api.enums.ShopType
 import javax.persistence.*

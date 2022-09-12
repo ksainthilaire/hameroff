@@ -1,6 +1,5 @@
-package com.hameroff.api.model
+package com.hameroff.api.model.database
 
-import java.sql.Timestamp
 import javax.persistence.*
 
 @Entity
@@ -9,6 +8,6 @@ data class Product(
     @Id @GeneratedValue(strategy = GenerationType.AUTO) var id: Long? = null,
     var name: String? = null,
     var description: String? = null,
-    var price: String? = null,
+    var price: Double? = null,
     var deliveryTime: Long = 168
 )

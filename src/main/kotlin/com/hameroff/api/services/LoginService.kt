@@ -1,7 +1,7 @@
 package com.hameroff.api.services
 
-import com.hameroff.api.forms.request.LoginRequest
-import com.hameroff.api.forms.response.LoginResponse
+import com.hameroff.api.model.request.LoginRequest
+import com.hameroff.api.model.response.LoginResponse
 import com.hameroff.api.repositories.IUserRepository
 import com.hameroff.api.utils.JwtUtil
 import org.springframework.beans.factory.annotation.Autowired
