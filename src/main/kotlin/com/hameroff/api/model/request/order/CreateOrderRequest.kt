@@ -1,8 +1,8 @@
-package com.hameroff.api.model.request
+package com.hameroff.api.model.request.order
 
 import com.hameroff.api.enums.DeliveryType
 import com.hameroff.api.enums.PaymentMethod
-import com.hameroff.api.model.database.ShopProduct
+import com.hameroff.api.model.request.base.IRequest
 import javax.persistence.Column
 
 data class CreateOrderRequest(

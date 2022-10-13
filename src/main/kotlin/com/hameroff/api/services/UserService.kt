@@ -1,7 +1,7 @@
 package com.hameroff.api.services
 
 import com.hameroff.api.model.request.AddUserAddressRequest
-import com.hameroff.api.model.request.RegisterRequest
+import com.hameroff.api.model.request.authentification.RegisterRequest
 import com.hameroff.api.model.database.User
 import com.hameroff.api.model.database.UserDeletion
 import com.hameroff.api.model.database.UserVerification

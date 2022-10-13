@@ -1,6 +1,7 @@
-package com.hameroff.api.model.request
+package com.hameroff.api.model.request.authentification
 
 import com.fasterxml.jackson.annotation.JsonAlias
+import com.hameroff.api.model.request.base.IRequest
 import javax.validation.constraints.Email
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size

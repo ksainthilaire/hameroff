@@ -1,7 +1,7 @@
 package com.hameroff.api.controllers
 
 import com.hameroff.api.model.request.AddUserAddressRequest
-import com.hameroff.api.model.request.RegisterRequest
+import com.hameroff.api.model.request.authentification.RegisterRequest
 import com.hameroff.api.model.database.User
 import com.hameroff.api.services.UserService
 import org.springframework.beans.factory.annotation.Autowired

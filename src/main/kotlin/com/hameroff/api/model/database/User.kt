@@ -25,6 +25,8 @@ data class User(
 
     var token: String? = null,
 
+    var ip: String? = null,
+
     @Size
     @Column(name = "shop_id")
     var shopId: Integer? = null,
